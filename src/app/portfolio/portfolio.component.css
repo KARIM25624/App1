@@ -1,0 +1,21 @@
+
+
+
+
+.layer {
+    background-color: #1abc9ce6;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .layer:hover {
+    opacity: 1;
+  }
+
+  .pic {
+    z-index: 9999;
+
+    img {
+      width: 600px;
+    }
+  }

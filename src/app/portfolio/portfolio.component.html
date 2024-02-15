@@ -1,0 +1,22 @@
+
+<div class="portfolio">
+  <div class="container">
+    <div class="text-center py-3">
+      <div class="row px-5 g-5">
+        <div class="col-md-4" *ngFor="let img of imgs; let i = index">
+          <div class="position-relative rounded-3">
+            <img [src]="img" class="w-100 rounded-3" alt="">
+            <div (click)="modelOpen(i)"
+              class="layer position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center rounded-3">
+              <i class="text-white fa-solid fa-plus fa-6x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="click" (click)="modelClose($event)"
+        class="pic bg-primary bg-opacity-25 position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+        <img [src]="imgSrc" alt="">
+      </div>
+    </div>
+  </div>
+</div>
